@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Manrope:wght@300&display=swap');
+*{
+    margin: 0
+}
+
+a, h1, h2{
+    font-family: "Kanit";
+}
+
+header{
+    position: relative;
+}
+header nav{
+    background-color: black;
+    height: 100%;
+    margin: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav ul li{
+    z-index: 1;
+    margin: 150px ;
+    list-style: none;
+}
+
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    border-bottom: 3px solid black;
+
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid white;
+    transition: border 0.5s ease-in-out;
+
+
+}
+
+.whiteBckg{
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    z-index: 2;
+    padding: 2rem 0;
+
+}
+
+.blackBckg{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.circle{
+    border-radius: 50%;
+    border: 5px solid white;
+    height: 95%;
+    width: 300px;
+    color: transparent;
+    opacity: 0;
+    margin: auto;
+    
+}
+.first{
+    position: absolute;
+    left: -50vw;
+}
+.last{
+    position: absolute;
+    right: -50vw;
+}
+.fixed{
+    border: 8px solid white;
+    margin: auto;
+    opacity: 1;
+}
+.fixed img{
+    width: 100%;
+    opacity: 0;
+}
+
+
+.transition1 {
+    transition:  opacity 2s ease-in-out, border 2s ease, left 3s ease-in-out;
+}
+.transition2 {
+    transition:  opacity 2s ease-in-out, border 2s ease, right 3s ease-in-out;
+}
+
+.transition3{
+    transition: opacity 0.5s ease-in, border-bottom 0.5s ease-in-out;
+    
+
+}
+  
+.first.move {
+    opacity: 1;
+    border: 8px solid white;
+
+  }
+
+.last.move{
+    opacity: 1;
+    border: 8px solid white;
+
+}
+
