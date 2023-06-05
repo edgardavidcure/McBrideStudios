@@ -35,9 +35,9 @@ setTimeout(() => {
 centerItem();
 
 setTimeout(() => {
-    const headerLinks = document.querySelectorAll(".headerLinks");
-
+    const headerLinks = document.querySelectorAll(".transition3");
     for (let item of headerLinks){
         item.style.opacity = "1"
     }
 }, 5000);
+
