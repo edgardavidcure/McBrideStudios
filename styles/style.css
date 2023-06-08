@@ -42,6 +42,22 @@ nav ul li{
     text-align: center;
     width: 50%;
 }
+nav ul li a img{
+    height: 80px;
+    width: auto;
+    filter: brightness(8);
+    transition: filter 1s ease;
+
+}
+
+nav ul li a img:hover{
+    filter: brightness(1);
+    
+    
+    transition: filter 1s ease;
+}
+
+
 
 main div ul li{
     color: white;
@@ -59,22 +75,7 @@ main div ul{
     justify-content: space-around;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    opacity: 0;
-    border-bottom: 3px solid black;
-    
 
-}
-
-nav ul li a:hover{
-    border-bottom: 3px solid white;
-    transition: border 0.5s ease-in-out;
-
-
-}
 
 .whiteBckg{
     background-color: white;
@@ -161,6 +162,13 @@ nav ul li a:hover{
     overflow-x: scroll;
     white-space: nowrap;
     scroll-behavior: smooth;
+  }
+  
+  #randomPortrait, #randomAutomotive, #randomLandscape{
+    max-height: 50vw;
+    max-width: 100%;
+    opacity: 0;
+    margin: 0 auto;
   }
   
   .align-image {
@@ -291,6 +299,10 @@ nav ul li a:hover{
     top: 50%;
 
     
+  }
+
+  .prev{
+    left: 0;
   }
   /* Position the "next button" to the right */
   .next {

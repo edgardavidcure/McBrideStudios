@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a class="headerLinks transition3" href="index.html">HOME</a></li>
-                <li><a class="headerLinks transition3" href="contact.html">CONTACT</a> </li>
+                <li><a class="headerLinks transition3" href="contact.html"><img src="images/instagram.png" alt=""></a> </li>
             </ul>
         </nav>
         <div class="whiteBckg">
@@ -29,17 +29,31 @@
     <main>
         <div>
             <ul>
-                <li onclick="getImages('portraits')">Potraits</li>
-                <li onclick="getImages('cars')">Cars</li>
+                <li onclick="getImages('portraits')">Portraits</li>
+                <li onclick="getImages('automotive')">Automotive</li>
                 <li onclick="getImages('landscapes')">Landscapes</li>
             </ul>
         </div>
-        <div class="imageContainer">
-
+        <div class="imageContainer transition3">
+            
             <!-- Next/previous controls -->
             <a class="prev transition3" onclick="plusGallery('-')">&#10094;</a>
             <a class="next transition3" onclick="plusGallery('+')">&#10095;</a>
         
+        </div>
+        <div class="transition3">
+            <div>
+                <img id="randomPortrait" class="transition3 main" src="" alt="">
+
+            </div>
+            <div>
+                <img id="randomAutomotive" class="transition3 main" src="" alt="">
+
+            </div>
+            <div>
+                <img id="randomLandscape" class="transition3 main" src="" alt="">
+
+            </div>
         </div>
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>

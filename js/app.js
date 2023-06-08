@@ -40,10 +40,10 @@ async function getImages(type){
             displayModalImages(data.portraits)
             displayImages(data.portraits);
             break;
-        case "cars":
+        case "automotive":
             cleanContent()
-            displayModalImages(data.cars)
-            displayImages(data.cars);
+            displayModalImages(data.automotive)
+            displayImages(data.automotive);
             break;
         case "landscapes":
             cleanContent()
@@ -61,7 +61,7 @@ async function getImages(type){
     
 }
 function cleanContent(){
-
+    //clearTimeout(timeoutId)
     const divElements = imgContainer.getElementsByTagName('div');
 
     // Convert the HTMLCollection to an array for easier manipulation
@@ -94,6 +94,7 @@ const displayImages = (types) => {
         imageElement.classList.add("align-image");
         imageElement.classList.add("transition3");
         imageElement.setAttribute("onclick", `openModal(); currentSlide(${i+1})`);
+        imageElement.loading = "lazy"
 
         let div = document.createElement("div");
         div.classList.add("column")
@@ -154,7 +155,23 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = "flex";
 }
+async function pickRandomImg(){
+    const data = await getDataFromJson();
+    const randomPortraitEl = document.getElementById("randomPortrait");
+    const randomAutomotiveEl = document.getElementById("randomAutomotive");
+    const randomLandscapeEl = document.getElementById("randomLandscape");
+    const randomPortraitIndex = Math.floor(Math.random() * data.portraits.length);
+    const randomAutomotiveIndex = Math.floor(Math.random() * data.automotive.length);
+    const randomLandscapeIndex = Math.floor(Math.random() * data.landscapes.length);
+    const main = document.querySelectorAll(".main");
+    main.forEach(element => {
+        element.style.opacity = 1
+    });
 
+    randomPortraitEl.setAttribute("src", data.portraits[randomPortraitIndex].path)
+    randomAutomotiveEl.setAttribute("src", data.automotive[randomAutomotiveIndex].path )
+    randomLandscapeEl.setAttribute("src", data.landscapes[randomLandscapeIndex].path)
+}
 setTimeout(() => {
     const firstCircle = document.querySelector(".first");
     const secondCircle =  document.querySelector(".last");
@@ -172,9 +189,21 @@ setTimeout(() => {
     }
 }, 5000);
 
+//let timeoutId;
 
-
-
+// function start(){
+//     const main = document.querySelectorAll(".main")
+//     main.forEach(element => {
+//         element.style.opacity = 0
+//     });
+//     timeoutId = setTimeout(function() {
+//         pickRandomImg()
+//         setTimeout(pickRandomImg, 5000) 
+        
+//         start()
+//     }, 5000);
+// }
+// start()
 getImages()
 
 
