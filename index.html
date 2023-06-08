@@ -27,64 +27,29 @@
     </header>
     
     <main>
-        <div class="imageContainer">
-            <div class="column">
-                <img src="images/TDM_5126.jpeg" class="align-image transition3" alt="Image 1" onclick="openModal();currentSlide(1)">
-            </div>
-            <div class="column">
-                <img src="images/TDM_1334-Edit.jpeg" class="align-image transition3" alt="Image 2 " onclick="openModal();currentSlide(2)">
-            </div>
-            <div class="column">
-                <img src="images/image4.jpeg" class="align-image transition3" alt="Image 3 " onclick="openModal();currentSlide(3)">
-            </div>
-            <div class="column">
-                <img src="images/image0.jpeg" class="align-image transition3" alt="Image 1" onclick="openModal();currentSlide(4)">
-            </div class="column">
-            <div class="column">
-                <img src="images/image2-2.jpeg" class="align-image transition3" alt="Image 2 " onclick="openModal();currentSlide(5)">
-            </div>
-            <div class="column">
-                <img src="images/image1.jpeg" class="align-image transition3" alt="Image 3 " onclick="openModal();currentSlide(6)">
-            </div>
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusGallery('-')">&#10094;</a>
-            <a class="next" onclick="plusGallery('+')">&#10095;</a>
-        
-        </div>
         <div>
-            <img src="images/instagram.png" alt="">
+            <ul>
+                <li onclick="getImages('portraits')">Potraits</li>
+                <li onclick="getImages('cars')">Cars</li>
+                <li onclick="getImages('landscapes')">Landscapes</li>
+            </ul>
+        </div>
+        <div class="imageContainer">
+
+            <!-- Next/previous controls -->
+            <a class="prev transition3" onclick="plusGallery('-')">&#10094;</a>
+            <a class="next transition3" onclick="plusGallery('+')">&#10095;</a>
+        
         </div>
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
           
-              <div class="mySlides">
-                <img src="images/TDM_5126.jpeg">
-              </div>
-          
-              <div class="mySlides">
-                <img src="images/TDM_1334-Edit.jpeg">
-              </div>
-          
-              <div class="mySlides">
-                <img src="images/image4.jpeg">
-              </div>
-          
-              <div class="mySlides">
-                <img src="images/image0.jpeg">
-              </div>
-
-              <div class="mySlides">
-                <img src="images/image2-2.jpeg">
-              </div>
-
-              <div class="mySlides">
-                <img src="images/image1.jpeg">
-              </div>
+              
               <!-- Next/previous controls -->
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          
+            </div>
              
         </div>
         

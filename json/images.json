@@ -1,0 +1,83 @@
+{
+    "cars":[
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        }
+    ],
+
+    "portraits":[
+        {
+            "path": "/images/portrait1.jpeg"
+        },
+        {
+            "path": "/images/portrait2.jpeg"
+        },
+        {
+            "path": "/images/portrait3.jpeg"
+        },
+        {
+            "path": "/images/portrait4.jpeg"
+        },
+        {
+            "path": "/images/portrait5.jpeg"
+        },
+        {
+            "path": "/images/portrait6.jpeg"
+        },
+        {
+            "path": "/images/portrait7.jpeg"
+        },
+        {
+            "path": "/images/portrait1.jpeg"
+        }
+    ],
+    "landscapes":[
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        },
+        {
+            "path": "/images/"
+        }
+    ]
+
+
+}

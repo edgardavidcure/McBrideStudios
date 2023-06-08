@@ -2,9 +2,13 @@
 *{
     margin: 0
 }
+
 main{
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
+
 
 a, h1, h2{
     font-family: "Kanit";
@@ -25,18 +29,35 @@ header nav{
 
 nav ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    padding: 0;
 
 }
 
 nav ul li{
     z-index: 1;
-    margin: 150px ;
     list-style: none;
+    text-align: center;
+    width: 50%;
 }
 
+main div ul li{
+    color: white;
+    list-style: none;
+    font-family: "Kanit";
+    font-size: 2rem;
+    cursor: pointer;
+}
+main div ul li:hover{
+    color: rgba(182, 182, 182, 0.9);
+}
 
+main div ul{
+    display: flex;
+    justify-content: space-around;
+}
 
 nav ul li a{
     text-decoration: none;
@@ -96,7 +117,7 @@ nav ul li a:hover{
 .fixed{
     border: 8px solid white;
     margin: auto;
-    opacity: 1;
+    opacity: 0;
 }
 
 .fixed img{
@@ -135,11 +156,11 @@ nav ul li a:hover{
     display: flex;
     background-color: black;
     padding-top: 10rem;
+    min-width: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
     white-space: nowrap;
     scroll-behavior: smooth;
-
   }
   
   .align-image {
@@ -231,25 +252,46 @@ nav ul li a:hover{
     width: auto;
   }
   
-  /* Next & previous buttons */
-  .prev,
-  .next {
+
+
+  .prev, .next{
     cursor: pointer;
     position: absolute;
-    top: 700px;
     width: auto;
-    padding: 16px;
     margin-top: -50px;
     color: yellow;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     transition: 0.6s ease;
+    padding: 16px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
+    
+
+  }
+  /* Next & previous buttons */
+  .imageContainer .prev,
+  .imageContainer .next {
+    
+    top: 700px;
+    opacity: 0;
+    z-index: 1;
+    display: none;
+  }
+
+ .imageContainer::-webkit-scrollbar {
+    display: none;
   }
   
+  .modal .prev,
+  .modal .next {
+    
+    top: 50%;
+
+    
+  }
   /* Position the "next button" to the right */
   .next {
     right: 0;
