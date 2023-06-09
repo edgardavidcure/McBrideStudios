@@ -1,5 +1,9 @@
 const circles = document.querySelectorAll(".circle");
+const portraitsContainer = document.querySelector("#portraits")
+const automotiveContainer = document.querySelector("#automotive")
+const landscapesContainer = document.querySelector("#landscapes")
 const imgContainer = document.querySelector(".imageContainer")
+
 const modalContainer = document.querySelector(".modal-content")
 
 
@@ -32,26 +36,14 @@ async function getDataFromJson(){
     return data;
 }
 
-async function getImages(type){
+async function getImages(){
     let data = await getDataFromJson();
-    switch (type) {
-        case "portraits":
-            cleanContent()
-            displayModalImages(data.portraits)
-            displayImages(data.portraits);
-            break;
-        case "automotive":
-            cleanContent()
-            displayModalImages(data.automotive)
-            displayImages(data.automotive);
-            break;
-        case "landscapes":
-            cleanContent()
-            displayModalImages(data.landscapes)
-            displayImages(data.landscapes);
-        default:
-            break;
-    }
+        displayImages(data.portraits, portraitsContainer);
+          
+        displayImages(data.automotive, automotiveContainer);
+          
+        displayImages(data.landscapes, landscapesContainer);
+    
     setTimeout(() => {
         const headerLinks = document.querySelectorAll(".align-image");
         for (let item of headerLinks){
@@ -60,9 +52,30 @@ async function getImages(type){
     }, 500);
     
 }
+
+const displayImages = (types, container) => {
+
+    types.forEach((type, i) => {
+        let imageElement = document.createElement("img");
+        imageElement.setAttribute("src", type.path);
+        imageElement.setAttribute("alt", `${type} by Terry McBride`);
+        imageElement.classList.add("align-image");
+        imageElement.classList.add("transition3");
+        imageElement.setAttribute("onclick", `openModal(); currentSlide(${i+1})`);
+        imageElement.loading = "lazy";
+
+        let div = document.createElement("div");
+        div.classList.add("column")
+
+        div.insertAdjacentElement("afterbegin", imageElement);
+
+        container.insertAdjacentElement("beforeend", div)
+    });
+}
+
 function cleanContent(){
-    //clearTimeout(timeoutId)
-    const divElements = imgContainer.getElementsByTagName('div');
+
+    const divElements = modalContainer.getElementsByTagName('div');
 
     // Convert the HTMLCollection to an array for easier manipulation
     const divArray = Array.from(divElements);
@@ -78,30 +91,6 @@ function cleanContent(){
     // Remove each div element
     modalDivArray.forEach((div) => {
         div.remove();
-    });
-}
-
-const displayImages = (types) => {
-    const leftArrow = imgContainer.querySelector(".prev");
-    const rightArrow = imgContainer.querySelector(".next");
-    leftArrow.style.display = "block";
-    rightArrow.style.display = "block"
-
-    types.forEach((type, i) => {
-        let imageElement = document.createElement("img");
-        imageElement.setAttribute("src", type.path)
-        imageElement.setAttribute("alt", `${type} by Terry McBride`);
-        imageElement.classList.add("align-image");
-        imageElement.classList.add("transition3");
-        imageElement.setAttribute("onclick", `openModal(); currentSlide(${i+1})`);
-        imageElement.loading = "lazy"
-
-        let div = document.createElement("div");
-        div.classList.add("column")
-
-        div.insertAdjacentElement("afterbegin", imageElement);
-
-        imgContainer.insertAdjacentElement("beforeend", div)
     });
 }
 const displayModalImages = (types) => {
@@ -128,7 +117,9 @@ function openModal() {
 
 // Close the Modal
 function closeModal() {
-document.getElementById("myModal").style.display = "none";
+    document.getElementById("myModal").style.display = "none";
+    cleanContent();
+
 }
 
 // Next/previous controls
@@ -136,12 +127,11 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 function currentSlide(n) {
-    console.log(n)
     showSlides(slideIndex = n);
 }
-function plusGallery(n) {
-    const pixels = n + 200
-    imgContainer.scrollBy(pixels, 0);
+function plusGallery(n, selector) {
+    const pixels = n + 200;
+    document.querySelector(selector).scrollBy(pixels, 0);
 }
 
 function showSlides(n) {

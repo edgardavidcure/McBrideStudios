@@ -9,39 +9,50 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="headerLinks transition3" href="index.html">HOME</a></li>
-                <li><a class="headerLinks transition3" href="contact.html"><img src="images/instagram.png" alt=""></a> </li>
-            </ul>
-        </nav>
-        <div class="whiteBckg">
-            <div class="blackBckg">
-                <div class="circle first transition1"></div>
-                <div class="circle last transition2"></div>
-                <div class="circle fixed transition3">
-                    <img class="transition3"src="images/logo.png" alt="Logo">
-                </div>
+        <div id="contact">
+            <div id="personalInfo" class="transition3">
+                <h1>
+                    Terry McBride
+                </h1>
+                <p>Tdmcbride15@yahoo.com</p>
+            </div>
+            <a class="headerLinks social transition3" href="contact.html"><img src="images/instagram.png" alt=""></a>
+        </div>
+        <div class="blackBckg">
+            <div class="circle first transition1"></div>
+            <div class="circle last transition2"></div>
+            <div class="circle fixed transition3">
+                <img class="transition3"src="images/logo.png" alt="Logo">
             </div>
         </div>
     </header>
     
     <main>
-        <div>
-            <ul>
-                <li onclick="getImages('portraits')">Portraits</li>
-                <li onclick="getImages('automotive')">Automotive</li>
-                <li onclick="getImages('landscapes')">Landscapes</li>
-            </ul>
-        </div>
-        <div class="imageContainer transition3">
-            
+        <h1 onclick="getImages('portraits')">Portraits</h1>
+
+        <div id="portraits" class="imageContainer transition3">
             <!-- Next/previous controls -->
-            <a class="prev transition3" onclick="plusGallery('-')">&#10094;</a>
-            <a class="next transition3" onclick="plusGallery('+')">&#10095;</a>
+            <a class="prev transition3 portraitPrev" onclick="plusGallery('-', '#portraits')">&#10094;</a>
+            <a class="next transition3 portraitNext" onclick="plusGallery('+', '#portraits')">&#10095;</a>
         
         </div>
-        <div class="transition3">
+        <h1 onclick="getImages('automotive')">Automotive</h1>
+
+        <div id="automotive" class="imageContainer transition3">
+            <!-- Next/previous controls -->
+            <a class="prev transition3 automotivePrev" onclick="plusGallery('-', '#automotive')">&#10094;</a>
+            <a class="next transition3 automotiveNext" onclick="plusGallery('+', '#automotive')">&#10095;</a>
+        
+        </div>
+        <h1 onclick="getImages('landscapes')">Landscapes</h1>
+
+        <div id="landscapes" class="imageContainer transition3">
+            <!-- Next/previous controls -->
+            <a class="prev transition3 landscapesPrev" onclick="plusGallery('-', '#landscapes')">&#10094;</a>
+            <a class="next transition3 landscapesNext" onclick="plusGallery('+', '#landscapes')">&#10095;</a>
+        
+        </div>
+        <!-- <div class="transition3">
             <div>
                 <img id="randomPortrait" class="transition3 main" src="" alt="">
 
@@ -54,7 +65,7 @@
                 <img id="randomLandscape" class="transition3 main" src="" alt="">
 
             </div>
-        </div>
+        </div> -->
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
