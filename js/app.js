@@ -31,7 +31,7 @@ function centerItem() {
 }
 
 async function getDataFromJson(){
-    let jsonData = await fetch("../data/data.json");
+    let jsonData = await fetch("/McBrideStudios/data/data.json");
     let data = await jsonData.json();
     return data;
 }
