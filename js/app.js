@@ -38,6 +38,7 @@ async function getDataFromJson(){
 
 async function getImages(){
     let data = await getDataFromJson();
+
         displayImages(data.portraits, portraitsContainer);
           
         displayImages(data.automotive, automotiveContainer);
