@@ -1,0 +1,182 @@
+{
+    "automotive":[
+        {
+            "path": "/McBrideStudios/images/cars1.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars2.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars3.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars4.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars5.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars6.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars7.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars8.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars9.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars10.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars11.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars12.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars13.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars14.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars15.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars16.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars17.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/cars18.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto1.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto2.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto3.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto4.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto5.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto6.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto7.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto8.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto9.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/moto10.jpg"
+        }
+    ],
+
+    "portraits":[
+        {
+            "path": "/McBrideStudios/images/portrait1.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait2.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait3.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait4.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait5.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait6.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait7.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait9.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait10.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait12.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait13.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait14.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait15.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait16.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait17.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait18.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait19.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait20.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait21.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait22.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/portrait23.jpg"
+        }
+    ],
+    "landscapes":[
+        {
+            "path": "/McBrideStudios/images/landscape1.jpeg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape2.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape3.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape4.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape5.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape6.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape7.jpg"
+        },
+        {
+            "path": "/McBrideStudios/images/landscape8.jpg"
+        }
+    ]
+
+
+}
